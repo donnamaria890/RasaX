@@ -20,7 +20,7 @@ class ActionWeather(Action):
     def run(self, dispatcher, tracker, domain):
         loc = tracker.get_slot('location')
         params = {
-          'access_key': '731d26f00dee42794c56daaaa6749d0af35',
+          'access_key': '731d26f00dee42794c56daaaa6749d0af35', # Put your API key
           'query': loc
         }
         api_result = requests.get('http://api.weatherstack.com/current', params)
